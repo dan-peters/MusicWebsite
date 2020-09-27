@@ -34,7 +34,14 @@ $(document).ready(function(){
   });
 });
 </script>
-
+<script>
+	$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+</script>
 </head>
 
 <style>
@@ -48,6 +55,25 @@ h1 { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Ge
 h3 { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size: 6vh}
 
  p { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size: 3vh; font-style: normal; font-variant: normal; font-weight: 400; line-height: 4vh;}
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+section::after {
+  position: absolute;
+  bottom: 0;
+  right:0;
+  content: '';
+  width: 100%;
+  height: 60%;
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+}
 
 .email:link{
 color: black;
@@ -73,6 +99,26 @@ color: black;
       .opaque {
       	opacity:100%;
       }
+
+      .videoWrapper {
+      	width:50%;
+  padding-top: 48.38%; /* 16:9 */
+}
+
+.videoWrapper iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+      .verticalLine {
+  position: absolute;
+  background-color: black;
+  width: 1%;
+  top: 0px;
+  bottom: 0px;
+  left: 50%;
+}
 
       .youtube {
         background: transparent;
@@ -130,24 +176,21 @@ color: black;
 .split {
   width: 50%;
   height:100%;
-  position: relative;
+  position:relative;
   text-align:center;
   align-items: center;
-  justify-content: center;
-  top: 0;
+  top:0;
   margin:0;
   padding:0;
   display:flex;
   overflow:auto;
   flex-direction:column;
-  justify-content:center;
-}
+  justify-content:center;}
 
 /* Control the left side */
 .left {
   float: left;
-   padding-top:4%;
-
+  padding-top:4%;
 }
 
 /* Control the right side */
@@ -158,8 +201,8 @@ color: black;
 
 .container_1 {
 	position: relative;
+	height: 100%;
 	width: 100%;
-    height: 100%;
     text-align:center;
     overflow: hidden;
     bottom: 0;
@@ -283,53 +326,162 @@ padding:2em;
 
       }
 
-      .shaded {
-      	display:inline;
-      	background-color:rgba(1,1,1,0.5);
-      	border-radius:25%;
-      	text-shadow: 2px 2px 0 black;
-      	height:70%;
-      	margin-left:5%;
-		margin-right:5%;
-		margin-bottom:20%;
-		margin-top:10%;
-      }
-</style>
+		#section03 a {
+		  padding-top: 0;
+		}
+		#section03 a span {
+		  position: absolute;
+		  top: 0;
+		  left: 50%;
+		  width: 46px;
+		  height: 46px;
+		  margin-left: -23px;
+		  border: 1px solid #fff;
+		  border-radius: 100%;
+		  box-sizing: border-box;
+		}
+		#section03 a span::after {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  content: '';
+		  width: 16px;
+		  height: 16px;
+		  margin: -12px 0 0 -8px;
+		  border-left: 1px solid #fff;
+		  border-bottom: 1px solid #fff;
+		  -webkit-transform: rotate(-45deg);
+		  transform: rotate(-45deg);
+		  box-sizing: border-box;
+		}
+		#section03 a span::before {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  z-index: -1;
+		  content: '';
+		  width: 44px;
+		  height: 44px;
+		  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+		  border-radius: 100%;
+		  opacity: 0;
+		  -webkit-animation: sdb03 3s infinite;
+		  animation: sdb03 3s infinite;
+		  box-sizing: border-box;
+		}
+		.demo a {
+		  position: absolute;
+		  bottom: 27%;
+		  left: 48%;
+		  z-index: 5;
+		  -webkit-transform: translate(0, -50%);
+		  transform: translate(0, -50%);
+		  color: #fff;
+		  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+		  letter-spacing: .1em;
+		  text-decoration: none;
+		  transition: opacity .3s;
+		}
+		@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+		.demo a:hover {
+		  opacity: .5;}
+		</style>
 
 <body>
 	<div class = "container_1" id = "Home" style = "background-image:url('img/444E8202-8CF7-478F-B5A3-1B3DAF132E6B.jpeg');background-size: cover; /* or contain depending on what you want */
   background-position: center center;
   background-repeat: no-repeat;
   ">
-		<div class = "split right" style="width:40%;">
-			<div class = "shaded">
-				<div style="position:absolute;top:15%;right:25%;background-color:rgba(0,0,0,0.5);padding-top:7%;padding-left:5%;padding-right:5%;line-height:0;padding-bottom:4%">
-			<iframe style = "flex:1;margin:auto;" src="https://open.spotify.com/embed/track/6hN8XWJEnsCSBZJ4v8Ckdq" width="250" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"> </iframe>
-			<h3 style="font-size:5vh;color:rgba(245, 245, 245,1);flex:1;"> DEBUT SINGLE </h3>
-		</div>
-		</div>
-    	</div>
-    	<div class = "split left" style="display:inline;background-color:none;text-shadow: 2px 2px 0 black;padding-left:5%;width:55%"> 
+		
+    	<div class = "split left" style="display:inline;background-color:none;text-shadow: 2px 2px 0 black;padding-left:5%;width:55%;float:none;text-align:center;top:3em"> 
     		<h1 class = "name" style="color:rgba(245, 245, 245,1); "> Dan Peters </h1> 
     		<h3 class = "title"style="color:rgba(245, 245, 245,1) "> pianist & singer-songwriter </h3>
  		</div>
-		
+
+		<section id="section03" class="demo">
+  		<a href="#Music"><span></span><br><br><br>MUSIC</a>
+		</section>
+
 		<div class = "tabcontainer">
         <a class="tablink" href="#Home" style="color:lightblue"> Home</a>
-		<a class="tablink" href="#About"> About</a>
         <a class="tablink" href="#Music"> Music</a>
+		<a class="tablink" href="#About"> About</a>
         <a class="tablink" href="#Contact"> Contact</a>
     	</div>
 
+
 	</div>
 
-    <div class = "container_1" id = "About" style = "background-image:url('img/444E8202-8CF7-478F-B5A3-1B3DAF132E6B.jpeg');background-size: cover; /* or contain depending on what you want */
+    
+    <div class = "container_1" id = "Music">
+        <div class="split left" style="height:100%;padding-top:0;background-color:rgba(50, 143, 168,.8);">
+        	        <h1 class = "about_title" style="text-shadow: 2px 2px 0 black;color:rgba(245, 245, 245,1);"> LISTEN </h1>
+<iframe width="70%" height="500" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1135863040&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/dan_peters" title="Dan Peters" target="_blank" 
+	style="color: #cccccc; text-decoration: none;">Dan Peters</a> · <a href="https://soundcloud.com/dan_peters/sets/original-songs" title="Original songs" target="_blank" style="color: #cccccc; text-decoration: none;">Original songs</a></div>
+</div>
+
+<div class="split right" style="height:90%;padding-top:3%;padding-bottom:7%;background-color:rgba(124, 0, 0,.5);justify-content:space-around;">
+        	        <h1 class = "about_title" style="text-shadow: 2px 2px 0 black;color:rgba(245, 245, 245,1);"> WATCH </h1>
+        	        <iframe style="width:70%" height="250"src="https://www.youtube.com/embed/videoseries?list=PLBgiNwpkkvdVcjaBKqEDYl8UW4OjLBVKW" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        	        allowfullscreen="allowfullscreen"
+        mozallowfullscreen="mozallowfullscreen" 
+        msallowfullscreen="msallowfullscreen" 
+        oallowfullscreen="oallowfullscreen" 
+        webkitallowfullscreen="webkitallowfullscreen"> </iframe> 
+        	        <iframe  style="width:70%" height="250" src="https://www.youtube.com/embed/videoseries?list=PLBgiNwpkkvdUgsInSBjV1LZ7HhdfmK-Vg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        	        allowfullscreen="allowfullscreen"
+        mozallowfullscreen="mozallowfullscreen" 
+        msallowfullscreen="msallowfullscreen" 
+        oallowfullscreen="oallowfullscreen" 
+        webkitallowfullscreen="webkitallowfullscreen"> </iframe>  
+</div>
+<div class= "verticalLine">
+ 		</div>
+        <div class = "tabcontainer">
+        <a class="tablink" href="#Home"> Home</a>
+        <a class="tablink" href="#Music" style="color:lightblue"> Music</a>
+		<a class="tablink" href="#About" > About</a>
+        <a class="tablink" href="#Contact"> Contact</a>
+    </div>
+    
+    </div>
+        <div class = "container_1" id = "About" style = "background-image:url('img/444E8202-8CF7-478F-B5A3-1B3DAF132E6B.jpeg');background-size: cover; /* or contain depending on what you want */
   background-position: center center;
   background-repeat: no-repeat;
   ">       
 
 <div class = "split right" style="width:50%">
-			<img class="center_1" src="img/14907805_10209979378108339_682669346_o (6).jpeg" style="opacity:100%;border-left:solid">
+			<img class="center_1" src="img/14907805_10209979378108339_682669346_o (6).jpeg" style="opacity:100%;width:100%">
     	</div>
     	<div class = "split left" style="background-color:rgba(119,136,153,.9);text-shadow: 2px 2px 0 black;width:35%;padding-left:7.5%;padding-right:7.5%;padding-top:0"> 
     		 <h1 class = "about_title" style=""> ABOUT </h1>
@@ -346,40 +498,14 @@ padding:2em;
 		Radiohead
 		 </p>
  		</div>
-		
 
+ 		<div class= "verticalLine">
+ 		</div>
         <div class = "tabcontainer">
         <a class="tablink" href="#Home"> Home</a>
-		<a class="tablink" href="#About" style="color:lightblue"> About</a>
 		<a class="tablink" href="#Music"> Music</a>
+		<a class="tablink" href="#About" style="color:lightblue"> About</a>
         <a class="tablink" href="#Contact"> Contact</a>
-    </div>
-
-</div>
-    <div class = "container_1" id = "Music">
-        <div class="split left" style="height:100%;padding-top:0;background-color:rgba(50, 143, 168,.8);">
-        	        <h1 class = "about_title" style="text-shadow: 2px 2px 0 black;color:rgba(245, 245, 245,1);"> LISTEN </h1>
-<iframe src="https://open.spotify.com/embed/track/6hN8XWJEnsCSBZJ4v8Ckdq" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-</div>
-
-<div class="split right" style="height:90%;padding-top:3%;padding-bottom:7%;background-color:rgba(124, 0, 0,.5)">
-        	        <h1 class = "about_title" style="text-shadow: 2px 2px 0 black;color:rgba(245, 245, 245,1);"> WATCH </h1>
-        	        <iframe style="padding:2%;width: 80%;
-    height: 100%;" src="https://www.youtube.com/embed/videoseries?list=PLBgiNwpkkvdVcjaBKqEDYl8UW4OjLBVKW" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-         <iframe style="padding:2%;width: 80%;
-    height: 100%;"src="https://www.youtube.com/embed/videoseries?list=PLBgiNwpkkvdUgsInSBjV1LZ7HhdfmK-Vg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-</div>
-        <img class="center_1" style="opacity:20%" src="img/IMG_2404.jpeg">
-
-
-        <div class = "tabcontainer">
-        <a class="tablink" href="#Home"> Home</a>
-		<a class="tablink" href="#About" > About</a>
-		<a class="tablink" href="#Music" style="color:lightblue"> Music</a>
-        <a class="tablink" href="#Contact"> Contact</a>
-    </div>
-    <div style="position:absolute;width:50%;height:100%;left:0;top:0;border-right:solid">
-    </div>
     </div>
 <div class="icon-bar">
           <a href="http://www.facebook.com" class = "facebook"><i class="fa fa-facebook"></i></a>
@@ -388,21 +514,23 @@ padding:2em;
           <a href="#" class = "soundcloud" ><i class="fa fa-soundcloud"></i></a>
           <a href="#" class="mail"><i class="fa fa-envelope" ></i></a>
         </div>
+
+</div>
     <div class = "container_1" style="background-image:url('img/14875863_10209979378548350_1073256539_o.jpeg');background-size: cover; /* or contain depending on what you want */
   background-position: center center;
   background-repeat: no-repeat;" id = "Contact">
-  <h1 style =  "position:absolute;text-align:center;width:50%;color:white;font-size:6vh;width:100%;bottom:15%;"> Booking:
+  <h1 style =  "position:absolute;text-align:center;width:50%;color:white;font-size:6vh;width:100%;bottom:15%;opacity:80%"> Booking:
         <a style="display:inline;color:inherit" class = "email" href="mailto:danpetersmusic@gmail.com">danpetersmusic@gmail.com</a>
         </h1>
         <div class = "tabcontainer">
         <a class="tablink" href="#Home"> Home</a>
+        <a class="tablink" href="#Music" > Music</a>
 		<a class="tablink" href="#About" > About</a>
-		<a class="tablink" href="#Music" > Music</a>
         <a class="tablink" href="#Contact" style="color:lightblue"> Contact</a>
     </div>
     <div>
 
-    <div class="icon-bar-horizontal" style="position:absolute;left:25%;bottom:5%;margin-left: auto;margin-right: auto;">
+    <div class="icon-bar-horizontal" style="position:absolute;left:25%;bottom:5%;margin-left: auto;margin-right: auto;opacity:80%">
           <a href="http://www.facebook.com" class = "facebook opaque"><i class="fa fa-facebook"></i></a>
           <a href="#" class = "youtube opaque" ><i class="fa fa-youtube"></i></a>
           <a href="#" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
@@ -426,7 +554,6 @@ padding:2em;
           document.getElementById(pageName).style.display = "block";
           elmnt.style.backgroundColor = color;
         }
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
