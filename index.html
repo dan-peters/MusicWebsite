@@ -5,98 +5,99 @@
 
 <head>
   <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
   <title>Dan Peters</title>
-<link href="dist/pattern.min.css" rel="stylesheet">
+  <link href="dist/pattern.min.css" rel="stylesheet"> </head>
 
-</head>
+  <style>
+    body{
+      font-family: Arial;
+      width:65%;
+      margin: 0 auto;
+    }
 
-<style>
-  body{
-    font-family: Arial;
-    width:65%;
-    margin: 0 auto;
-}
+    h1,h2{font-family:'Palatino';}
 
-h2{
-  font-size:1.7vw;
-}
+    h1{
+      font-size:2.7em;
+      margin-top:.5em;
+    }
 
-@media only screen and (max-width: 800px) {
-  body {
-font-family: Arial;
-    width:80%;
-    margin: 0 auto;  }
-}
+    h2{font-size:1.5em;}
 
-#slide {
-    width: auto;
-    height: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
+    h3{font-family:'Palatino';}
 
-      .spotify {
-        background: transparent;
-        color: #1DB954;
-                opacity:95%;
-      }
-      .spotify:hover {
-        color: #1DB954;
-      }
+    .email:link{
+      color: black;
+      background-color: transparent;
+    }
+    .email:hover{
+      color: black;
+      background-color: transparent;
+      text-decoration: underline;
+    }
 
-      .youtube {
-        background: transparent;
-        color: gray;
-        opacity:95%;
-      }
+    #over { font-size:2em; position:relative;}
 
-      .youtube:hover {
-        color: #bb0000;
-      }
+    #slide {
+      width: auto;
+      height: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+    }
 
-      .instagram {
-        background: transparent;
-        color: white;
-                opacity:95%;
+    .spotify {
+      background: transparent;
+      color: #1DB954;
+      opacity:95%;
+    }
+    .spotify:hover {
+      color: #1DB954;
+    }
 
-      }
+    .instagram {
+      background: transparent;
+      color: white;
+      opacity:95%;
 
-      .instagram:hover {
-        color: #bb0000;
-      }
+    }
 
-      .mail {
-        background:transparent;
-        color:white;
-                opacity:95%;
+    .instagram:hover {
+      color: #bb0000;
+    }
 
-      }
+    .mail {
+      background:transparent;
+      color:white;
+      opacity:95%; }
 
       .mail:hover{
-        color:gray;
+        color:blue;
       }
 
-.left {
-  float:left;
-}
+      .left {
+        float:left;
+      }
 
-.right{
-  float:right;
-}
-.icon-bar-horizontal {
-    float:right;
-    width:25%;
-    margin-top: 1em;
-    margin-bottom: 1em;
+      .bio{
+        clear: both;width:50%;float:left
+      }
+
+      .right{
+        float:right;
+      }
+      .icon-bar-horizontal {
+        float:right;
+        width:25%;
+        margin-top: 1em;
       }
 
       .icon-bar-horizontal-bottom {
-    float:right;
-    width:100%;
-    margin-top: 1em;
-    margin-bottom: 1em;
+        float:right;
+        width:100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
       }
 
       .icon-bar-horizontal a {
@@ -105,7 +106,7 @@ font-family: Arial;
         width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
         transition: all 0.3s ease;
         color: black;
-        font-size: 3vw;
+        font-size: 3em;
       }
 
       .icon-bar-horizontal-bottom a {
@@ -114,71 +115,228 @@ font-family: Arial;
         width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
         transition: all 0.3s ease;
         color: black;
-        font-size: 3vw;
+        font-size: 3em;
       }
 
-</style>
-<body>
- 
-<div >
-  <h1 class="left" style="font-size:3vw;" > Dan Peters </h1>
-   <div class="icon-bar-horizontal">
-          <a href="https://open.spotify.com/artist/0U7nvp2dvPQ3n4hR45i1s7?si=iLyR5accQnip95h55v3WUQ" class = "spotify"><i class="fa fa-spotify"></i></a>
-          <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
-          <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope" ></i></a>
-        </div>
-</div>
-<div style="clear: both;">
-        <h2 class="left"> Bio </h2>
-        <h2 class="right" > Recordings </h2>
+      .recordings {
+        float:right;width:50%
+      }
 
-</div>
-<div style="clear: both;width:50%;float:left">
-  <p1 style="font-size:1.4vw"> A pianist & singer-songwriter new on the scene in Austin, TX, Dan Peters folds in jazz harmonies with equal parts folk, rock, and Americana to craft his own authentic sound. Dan’s warm compositions and lyrics are full of curiosity about nature and the human experience. Listeners have described his music as “someone walking in the rain through an old timey downtown.” </p1>
-</div>
-<div style="float:right;width:50%">
-   <iframe style="border: 0; width: 90%; height: 50px;float:right" src="https://bandcamp.com/EmbeddedPlayer/track=3805461564/size=small/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="https://dan-peters-music.bandcamp.com/track/bottom-of-the-sea">Bottom of the Sea by Dan Peters</a></iframe>
-<br>
-<iframe style="border: 0; width: 90%; height: 50px;float:right" src="https://bandcamp.com/EmbeddedPlayer/track=90879783/size=small/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="https://dan-peters-music.bandcamp.com/track/the-birds-are-louder-in-texas">The Birds Are Louder in Texas by Dan Peters</a></iframe>
+      .recordings h2{
+        float:left;margin-left:10%;
+      }
 
-<h2 style="float:right"> Selected venues </h2>
-<p> 
-Mozart’s Coffee Roasters <it>(Austin, TX)<it>
-Room 43 (Chicago, IL)
-Carnegie Hall (New York, NY)
-Salem Jazz and Soul Festival (Salem, MA)
-Marblehead Festival of Arts (Marblehead, MA)
-Chianti Jazz Club (Beverly, MA)
-Shaolin Liu Performance Center (Rockport, MA)
-</p>
-</div>
+      .recordings iframe{
+        border: 0; width: 90%; height: 50px;float:right
+      }
 
-<div style="clear: both;">
-        <h2 class="left"> Photos </h2>
-</div>
-<div style="clear: both;" id="slide">
-    <img style= "padding:20px;padding-left:0;padding-top:0" src="img/75F7ADE1-839B-4A2E-9FFD-41BBD065286C.png" height = 300px width= auto>
-    <img style= "padding:20px;padding-left:0;padding-top:0" src="img/IMG_3759.png" height = 300px width= auto>
-    <img style= "padding:20px;padding-left:0;padding-top:0" src="img/IMG_6592.png" height = 300px width=auto>
-</div>
-<div style="clear: both;">
-    <h2 class="left"> Videos </h2>
-</div>
-<div style="clear: both;" id="slide">
-<iframe style="padding:20px;border:none;padding-left:0;padding-top:0" src="https://drive.google.com/file/d/1RA1sODj_Dmxn2tgZm1rsqCcbMp15Oqvy/preview" width="400" height="250" allow="autoplay"></iframe>
-<iframe style="padding:20px;border:none;padding-left:0;padding-top:0" src="https://drive.google.com/file/d/1-jMXjtlFMIKRraVNjj3Qg0taYhG19mvk/preview" width="400" height="250" allow="autoplay"></iframe>
-</div>
+      .venues {
+        clear: both;width:100%;float:left;margin-left:10%
+      }
+      .venues  h2{
+        float:left;margin-left:10%
+      }
 
-<div style="clear: both;">
-        <h2 class="left"> Contact </h2> </div>
-        <div style="clear: both;float:left;text-align:left">
-            <p1 style="float:left"><b>danpetersmusic@gmail.com <b> </p1> <br>
-            <div class="icon-bar-horizontal-bottom" style="float:left;bottom:0;width:100%">
-          <a href="https://open.spotify.com/artist/0U7nvp2dvPQ3n4hR45i1s7?si=iLyR5accQnip95h55v3WUQ" class = "spotify"><i class="fa fa-spotify"></i></a>
-          <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
-          <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope" ></i></a>
-        </div>
-      </div>
-    </body>
+      .videocontainer{
+        position:relative;
+        display:inline-block;
+        text-align:left;
+        width:42%;
+        padding-right:5%;
+        ;color:darkgrey;font-family:Times New Roman
+      }
+
+
+      .youtube {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 56.25%;
+      }
+
+      .youtube iframe {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+     }
+
+     @media only screen and (max-width: 800px) {
+      body {
+        font-family: Arial;
+        width:90%;
+        margin: 0 auto; 
+      }
+
+      .bio{
+        clear: both;width:100%;float:left
+      }
       
+      .icon-bar-horizontal {
+        width:40%;
+      }
+
+      .icon-bar-horizontal  a {
+        float: left; /* Float links side by side */
+        text-align: right;
+        width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
+        transition: all 0.3s ease;
+        color: black;
+        font-size: 2em;
+      }
+
+
+      .icon-bar-horizontal-bottom a {
+        float: left; /* Float links side by side */
+        text-align: left;
+        width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
+        transition: all 0.3s ease;
+        color: black;
+        font-size: 2em;
+      }
+      
+      .recordings {
+        float:left;width:100%
+      }
+
+      .recordings h2{
+        margin-left:0;
+      }
+
+      .recordings iframe{
+        border: 0; width: 100%; height: 50px;float:left
+
+      }
+      .venues {
+        clear: both;width:100%;float:left;margin-left:0
+      }
+      .venues  h2{
+        float:left;margin-left:0
+      }
+
+      .videocontainer{
+        position:relative;
+        display:inline-block;
+        text-align:left;
+        width:90%;
+        padding-right:5%;
+        ;color:darkgrey;font-family:Times New Roman
+      }
+
+      h1{font-size:2em;}
+      h3{font-size:1em;}
+    }
+
+  </style>
+
+  <body>
+    <div class = "title-bar">
+      <h1 class="left" style="margin-bottom:0;padding-bottom:0"> Dan Peters </h1> 
+      <div class="icon-bar-horizontal" style="margin-bottom:0;padding-bottom:0">
+        <a href="https://open.spotify.com/artist/0U7nvp2dvPQ3n4hR45i1s7?si=iLyR5accQnip95h55v3WUQ" class = "spotify"><i class="fa fa-spotify"></i></a>
+        <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
+        <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope-square" ></i></a>
+      </div>
+      <div style="clear: both;width:50%;float:left">
+        <h3 class="left" style="margin-top:0;padding-bottom:0"> <i>Jazz pianist and singer-songwriter</i> </h3> 
+      </div>
+    </div>
+
+
+    <div class="bio">
+      <h2 class="bio"> Bio </h2>
+      <p style="clear: both;margin-top:0"> 
+
+        Dan Peters is a pianist and singer-songwriter based in Austin, Texas. His songs are full of memorable melodies, weaving folk and rock influences together with jazz harmonies. Dan's thought-provoking lyrics explore the wonders of our natural world, and what it means to be a human living within it. 
+
+        <br><br>
+
+        Growing up in coastal Massachusetts, Dan started playing classical piano at a young age. Before long he found his way to jazz, drawn by the creative possibilities of improvisation. Dan continued to build on his musical education, completing a degree in Jazz Studies at Northwestern University in 2019. All the while Dan worked to refine his songwriting craft, composing and performing with several jazz and rock groups.
+
+        <br><br>
+
+        Dan’s two most recent releases embody the artistic voice that he has been developing for years. 
+
+        In "The Birds Are Louder in Texas," a lush indie-folk tune with bluesy saxophone and Fender Rhodes, Dan sings about the unfamiliar birds outside his window after moving across the country. 
+
+        In "Bottom of the Sea," Dan contemplates the mystery of the deep blue and the inner depths of our own minds, accompanied by fluid piano lines that evoke the movement of the ocean.
+
+        Dan can often be found performing songs like these at local Austin venues.
+
+        He is currently working on recording his forthcoming album, <i> The Stuff of Deserts</i>.
+
+      </p>
+    </div>
+    <div class = "recordings">
+      <h2 class = "recordings"> Recordings </h2>
+      <iframe class = "recordings" src="https://bandcamp.com/EmbeddedPlayer/track=90879783/size=small/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="https://dan-peters-music.bandcamp.com/track/the-birds-are-louder-in-texas">The Birds Are Louder in Texas by Dan Peters</a></iframe>
+      <br>
+      <iframe class = "recordings" src="https://bandcamp.com/EmbeddedPlayer/track=3805461564/size=small/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="https://dan-peters-music.bandcamp.com/track/bottom-of-the-sea">Bottom of the Sea by Dan Peters</a></iframe>
+      <h2 class =  "venues" > Selected venues </h2>
+      <div class="venues">
+        <p style = "margin-top:0"> 
+          Mozart’s Coffee Roasters <i>(Austin, TX)</i> <br>
+          Room 43 <i>(Chicago, IL)</i><br>
+          Carnegie Hall <i>(New York, NY)</i><br>
+          Salem Jazz and Soul Festival <i>(Salem, MA)</i><br>
+          Marblehead Festival of Arts <i>(Marblehead, MA)</i><br>
+          Chianti Jazz Club <i>(Beverly, MA)</i><br>
+          Shaolin Liu Performance Center <i>(Rockport, MA)</i><br>
+        </p>
+      </div>
+    </div>
+
+    <div style="clear: both;">
+      <h2 class="left"> Photos </h2>
+    </div>
+    <div style="clear: both;" id="slide">
+      <img style= "padding:20px;padding-left:0;padding-top:0" src="img/75F7ADE1-839B-4A2E-9FFD-41BBD065286C.png" height = 300px width= auto>
+      <img style= "padding:20px;padding-left:0;padding-top:0" src="img/94E2CD09-D5EA-46EA-9ABA-9C7081167ECB.png" height = 300px width= auto>
+      <img style= "padding:20px;padding-left:0;padding-top:0" src="img/IMG_3759.png" height = 300px width=auto>
+      <img style= "padding:20px;padding-left:0;padding-top:0" src="img/IMG_6592.png" height = 300px width=auto>
+    </div>
+    <div style="clear: both;">
+      <h2 class="left"> Videos </h2>
+    </div>
+    <div style="clear: both;" id="slide">
+      <div class="videocontainer">
+        <div class = "youtube" style="display:inline-block;text-align:left">
+          <iframe class = "youtube" style="border:none" src="https://drive.google.com/file/d/1RA1sODj_Dmxn2tgZm1rsqCcbMp15Oqvy/preview"  allow="autoplay"></iframe>
+        </div>
+        <br>
+        Isn't She Lovely (Stevie Wonder)
+      </div>
+      <div class="videocontainer">
+
+        <div class = "youtube" style="display:inline-block;text-align:left">
+          <iframe class = "youtube" style="border:none" src="https://drive.google.com/file/d/1-jMXjtlFMIKRraVNjj3Qg0taYhG19mvk/preview" allow="autoplay"></iframe>
+        </div>
+        <br>
+        Don't Think Twice, It's All Right (Bob Dylan)
+      </div>
+      <div class="videocontainer">
+
+        <div class = "youtube" style="display:inline-block;text-align:left">
+          <iframe class = "youtube" style="border:none" src="https://drive.google.com/file/d/1mxYy8Y9AXIB3wiIi5Da809hjJF_TsBG6/preview" allow="autoplay"></iframe>
+        </div>
+        <br>
+        Jesus, Etc. (Wilco)
+
+      </div>
+
+    </div>
+  </div>
+
+  <div style="clear: both;">
+    <h2 class="left"> Contact </h2> </div>
+    <div style="clear: both;float:left;text-align:left">
+      <a style="color:inherit;float:left;" class = "email" href="mailto:danpetersmusic@gmail.com">danpetersmusic@gmail.com<b></a>
+        <div class="icon-bar-horizontal-bottom" style="float:left;bottom:0;width:75%">
+          <a href="https://open.spotify.com/artist/0U7nvp2dvPQ3n4hR45i1s7?si=iLyR5accQnip95h55v3WUQ" class = "spotify"><i class="fa fa-spotify"></i></a>
+          <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
+          <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope-square" ></i></a>
+        </div>
+      </body>
+
 
