@@ -6,164 +6,49 @@
 <head>
   <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <title>Dan Peters Music</title>
+  <title>Dan Peters</title>
 <link href="dist/pattern.min.css" rel="stylesheet">
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-<script>
-	$(function() {
-  $('a[href*=#]').on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-  });
-});
-</script>
 </head>
 
 <style>
-	html, body {
-		height:100%;
-  margin: 0; 
-  padding: 0;
+  body{
+    font-family: Arial;
+    width:65%;
+    margin: 0 auto;
 }
 
-h1 { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size: 15vh}
-h3 { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size: 6vh}
-
- p { font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size: 3vh; font-style: normal; font-variant: normal; font-weight: 400; line-height: 4vh;}
-
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
-
-section {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+h2{
+  font-size:1.7vw;
 }
 
-section::after {
-  position: absolute;
-  bottom: 0;
-  right:0;
-  content: '';
-  width: 100%;
-  height: 60%;
-  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
-  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+@media only screen and (max-width: 800px) {
+  body {
+font-family: Arial;
+    width:80%;
+    margin: 0 auto;  }
 }
 
-.email:link{
-color: black;
-  background-color: transparent;
-  text-decoration: none;
+#slide {
+    width: auto;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
-.contactpage{
-  position:absolute;
-  text-align:center;
-  width:50%;
-  color:white;
-  font-size:3.5vh;
-  width:100%;
-  bottom:10%;
-  opacity:80%
-}
-
-.about{
-  text-shadow:none;
-  font-size: 1.25vw; 
-  font-style: normal;
-   font-variant: normal;
-   line-height:1.5vw;
-   font-family:Times;
-   color:#DCE1E3;
-}
-
-.aboutlefttext{
-  text-align:left;
-  width:100%;
-  height:100%;
-  overflow:auto;
-}
-.musicmobile{
-  display:none;
-}
-.a:link, visited{
-	text-decoration:none;
-	background-color: transparent;
-}
-
-.a:hover{
-	color: black;
-	  background-color: transparent;
-	text-decoration:underline;
-}
-
-.email:hover{
-color: black;
-  background-color: transparent;
-  text-decoration: underline;
-}
-.spotify {
+      .spotify {
         background: transparent;
-        color: white;
+        color: #1DB954;
                 opacity:95%;
-
       }
       .spotify:hover {
         color: #1DB954;
       }
 
-      .opaque {
-      	opacity:100%;
-      }
-
-      .videoWrapper {
-      	width:50%;
-  padding-top: 48.38%; /* 16:9 */
-}
-
-.videoWrapper iframe {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-      .verticalLine {
-  position: absolute;
-  background-color: black;
-  width: 1%;
-  top: 0px;
-  bottom: 0px;
-  left: 50%;
-}
-
       .youtube {
         background: transparent;
-        color: white;
+        color: gray;
         opacity:95%;
       }
 
@@ -179,19 +64,8 @@ color: black;
       }
 
       .instagram:hover {
-        color: #125688;
+        color: #bb0000;
       }
-
-      .soundcloud {
-        background: transparent;
-        color: white;
-                opacity:95%;
-
-      }	
-
-      .soundcloud:hover {
-        color: #ff5500;
-      } 
 
       .mail {
         background:transparent;
@@ -203,496 +77,108 @@ color: black;
       .mail:hover{
         color:gray;
       }
-.container_0 {
-	text-align: center;
-    height: 100%;
-    max-width: 50%;
-    overflow: hidden;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-}
 
-.split {
-  width: 50%;
-  height:100%;
-  position:relative;
-  text-align:center;
-  align-items: center;
-  top:0;
-  margin:0;
-  padding:0;
-  display:flex;
-  overflow:auto;
-  flex-direction:column;
-  justify-content:center;}
-
-/* Control the left side */
 .left {
-  float: left;
-  padding-top:4%;
+  float:left;
 }
 
-
-.aboutleft{
-  background-color:rgba(30,40,50,.95);
-  padding-left:5%;
-  padding-right:1%;
-  padding-top:5%;
-  display:inline;
-  width:61%;
+.right{
+  float:right;
 }
-/* Control the right side */
-.right {
-    float: right;
-}
-
-.aboutright {
-  width:33%;
-}
-
-.albumart {
-  position:absolute;
-  width:25%;
-  bottom:4%;
-  right:7%;
-  margin:0;
-  padding:0;
-  display:flex;
-  overflow:auto;
-  flex-direction:column;
-  justify-content:center;
-  float: right;
-}
-
-.aboutat{
-  overflow:scroll;
-}
-.container_1 {
-	position: relative;
-	height: 100%;
-	width: 100%;
-    text-align:center;
-    overflow: hidden;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-}
-	.center_1 {
-		vertical-align:top;
-		width:100%;
-		height:100%;
-		margin:0;
-		opacity:70%;
-		padding:0;
-	}
-	.opaque {
-		opacity:100%;
-	}
-
-	.name{
-    color:black;
-	margin:0 auto;
-}
-
-.spotifybox{
-    position: absolute;
-    display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	flex-direction: column;
-    top:35%;
-    right:1.5%;
-    width:25%;
-    height:60%;
-    border-radius:20%;
-    background-color:rgba(0,0,0,0);
-}
-
-.tabcontainer{
-	position:absolute;
-	color:black;
-	background-color:rgba(0,0,0,.8);
-	top: 0%;
-	height:5%;
-	width:100%;
-	padding-top:1%;
-}
-
-.tablink {
-	position:relative;
-	text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 3vh;
-    font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
-    padding:4%;}
-
-  .tablink:hover {
-    color: lightblue;
-  }
-
-.title{
-  margin:auto;
-  color:black;
-  font-size:5vh
-}
-
-.about_title{
-	color:white;
-	text-align:center;
-	font-family:Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
-	font-size: 5vh;
-}
-.pad{
-padding:2em;
-}
-
-.icon-bar {
-        position: fixed;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
-
-      .icon-bar a {
-        display: block;
-        text-align: center;
-        padding: .5vw;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 3vw;
-      }
 .icon-bar-horizontal {
-		position:relative;
-        width: 50%; /* Full-width */
-        overflow: auto; /* Overflow due to float */
+    float:right;
+    width:25%;
+    margin-top: 1em;
+    margin-bottom: 1em;
       }
 
-      .v1 {
-        background-image:url('img/94E2CD09-D5EA-46EA-9ABA-9C7081167ECB (1).png');
-        background-size: cover;
-        background-repeat:no-repeat;
+      .icon-bar-horizontal-bottom {
+    float:right;
+    width:100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
       }
 
       .icon-bar-horizontal a {
         float: left; /* Float links side by side */
-        text-align: center;
-        width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
-        padding: 1vw 0;
+        text-align: right;
+        width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
         transition: all 0.3s ease;
-        color: white;
+        color: black;
         font-size: 3vw;
-
-      }
-		@-webkit-keyframes sdb03 {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes sdb03 {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-		.demo a:hover {
-		  opacity: .5;}
-
-      .header{
-        float:none;
-        text-align:right;
-        top:5em;right:3%
       }
 
-  @media screen and (max-width: 800px){
-    .musicmobile{
-    width: 100%;
-    height:100%;
-    display:block;
-    text-align:center;
-    position:relative;
-    align-items: center;
-    background-color:rgba(124, 0, 0,.6);
-    padding-top:20%;
-    padding-bottom:20%;
-    }
-
-    .about{
-  text-shadow:none;
-  font-size: 5vw; 
-  font-style: normal;
-   font-variant: normal;
-   line-height:5vw;
-   font-family:Times;
-   color:#DCE1E3;
-}
-      .icon-bar-horizontal a {
+      .icon-bar-horizontal-bottom a {
         float: left; /* Float links side by side */
-        text-align: center;
-        width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
-        padding: 0vw 0;
+        text-align: left;
+        width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
         transition: all 0.3s ease;
-        color: white;
-        font-size: 7vw;
-
-      }
-.contactpage{
-  position:absolute;
-  text-align:center;
-  width:50%;
-  color:white;
-  font-size:2.5vh;
-  width:94%;
-  bottom:14%;
-  opacity:80%;
-  padding-left:3%;
-  padding-right:3%;
-}
-    .musicdesktopright{
-    display:none;
-    }
-    .musicdesktopleft{
-      display:none;
-    }
-    .musicdesktopcenter{
-      display:none;
-    }
-
-.aboutright {
-  display:none;
-}
-.aboutcenter{
-  display:none;
-}
-
-.aboutleft{
-  background-color:rgba(30,40,50,.95);
-  width:100%;
-  height:100%;
-}
-
-.aboutlefttext{
-  text-align:left;
-  width:80%;
-  height:80%;
-  overflow:auto;
-  padding-top:10%;
-  padding-bottom:10%;
-  padding-right:5%;
-}
-
-      .header{
-        right:0;
-        float:none;
-        text-align:center;
-        top:5em;
+        color: black;
+        font-size: 3vw;
       }
 
-	.albumart {
-	  all:revert;
-	  position:relative;
-	  left: 50%;
-	  transform: translateX(-50%);
-	  width:60%;
-	  top:40%;
-	}
-
-  	.name{
-      color:rgba(245, 245, 245,1);
-  		font-size:16vw;
-  	}
-  	.title{
-      color:rgba(245, 245, 245,1);
-  		font-size:6vw;
-  	}
-  	.tabcontainer{
-  		height:3.5%;
-  		padding-top:3%;
-  	}
-  	.tablink{
-	font-size: 5vw;
-    font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
-    padding:4%;}
-  	
-  	.icon-bar{
-  		right:0;
-  	}
-      .icon-bar a {
-        display: block;
-        text-align: center;
-        padding: .5vh;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 4vh;
-      }
-      .container_1{
-      	background-position:25% top;
-      }
-      .v1 {
-        background-image:url('img/444E8202-8CF7-478F-B5A3-1B3DAF132E6B.jpeg');
-        background-size: cover;
-        background-repeat:no-repeat;
-      }
-  }
-
-		</style>
-
+</style>
 <body>
-	<div class = "container_1 v1" id = "Home" >
-    	<div class = "split left header" style="display:inline;background-color:none;padding-left:5%;width:55%;"> 
-    		<h1 class = "name" > Dan Peters </h1> 
-    		<h3 class = "title" style = "opacity:95%;"> jazz pianist & singer-songwriter </h3>
- 		</div>
-
-		<div class = "tabcontainer">
-        <a class="tablink" href="#Home" style="color:lightblue"> Home</a>
-            <a class="tablink" href="#About"> About</a>
-        <a class="tablink" href="#Music"> Music</a>
-        <a class="tablink" href="#Contact"> Contact</a>
-    	</div>
-
-    	<div class = "albumart" >
-    	<a href = "https://distrokid.com/hyperfollow/danpeters/the-birds-are-louder-in-texas" >
-    	<img src="img/Dan_Cover_FINAL.png" style="width:80%;height:auto;border:5px solid black">     </a>
-    	<a href = "https://distrokid.com/hyperfollow/danpeters/the-birds-are-louder-in-texas" style="text-decoration:none">
-    	<h1 style="font-size: 3vh;margin-top:2vh;color:black;background-color:#fffaf0;border-radius:50%;padding:1.5vh"> DEBUT SINGLE </h1></a>
-    	</div>
-	</div>
-            <div class = "container_1 aboutat" id = "About" style = "background-image:url('img/444E8202-8CF7-478F-B5A3-1B3DAF132E6B.jpeg');background-size: cover; /* or contain depending on what you want */
-  background-position: center center;
-  background-repeat: no-repeat;">       
-
-<div class = "split right aboutright">
-      <img class="center_1" src="img/14907805_10209979378108339_682669346_o (6).jpeg" style="opacity:100%;width:100%;object-fit:cover">
-      </div>
-      <div class = "split left aboutleft"> 
-        <div class = "aboutlefttext">
-        <p class="about"  >
-        A pianist & singer-songwriter new on the scene in Austin, TX, Dan Peters folds in jazz harmonies with equal parts folk, rock, and Americana to craft his own authentic sound. Dan’s warm compositions and lyrics are full of curiosity about nature and the human experience. Listeners have described his music as “someone walking in the rain through an old timey downtown.” Dan’s musical influences include songwriting masters like Paul Simon and Joni Mitchell, jazz piano greats like Herbie Hancock and Ahmad Jamal, and a wide range of folk and rock artists including Leif Vollebekk, Mandolin Orange, and Wilco.
-</p>
-<p class="about" style="text-align:center;">
----</p>
-<p class = "about" >
-Dan has played the piano for as long as he can remember. Growing up in Massachusetts, he started off as a classical pianist, winning recognition in competitions and earning a performance at Carnegie Hall in New York. Dan remembers the first time he learned to improvise as a turning point in his creative journey. He studied jazz piano throughout middle and high school, and performed across Massachusetts at venues including Chianti’s Jazz Club and the Shalin Liu Performance Center. He could be found every week playing jazz and funk music with his trio at the Eastern Yacht Club, and playing solo piano in the cocktail lounge at the Harbor Light Inn. On many Fourth of July holidays, Dan sang and played keys with his rock band at the Marblehead Festival of Arts, on a waterfront stage overlooking the town’s harbor.<br><br>
-
-In 2015, Dan moved to the Chicagoland area to study at Northwestern University, pursuing a double major in Environmental Science and Jazz Studies. There, he continued developing his skills as a jazz pianist, composer, and improviser. Dan was fortunate to benefit from the guidance of incredibly talented mentors and peers, such as Victor Goines, director of the program. Throughout this time he also shaped his own artistic identity as a singer-songwriter. He crafted dozens of original compositions and performed them at cafes, open mics, and among friends. Dan’s songs draw on his diverse musical influences, with rich jazz harmonies supporting simple, memorable melodies. His thoughtful lyrics are full of natural imagery and metaphor, taking inspiration from poets like Robinson Jeffers, and reflecting his own introspection and careful observation of the world around him. <br><br>
-
-After graduating from Northwestern, Dan moved to Austin to work on his other passion: environmental research and advocacy. He is keen to connect with the vibrant musical community here and continue to develop and share his own craft.
-
-     </p>
-   </div>
-    </div>
-
-    <div class= "verticalLine aboutcenter" style="left:67%">
-    </div>
-        <div class = "tabcontainer">
-        <a class="tablink" href="#Home"> Home</a>
-            <a class="tablink" href="#About" style="color:lightblue"> About</a>
-
-    <a class="tablink" href="#Music"> Music</a>
-        <a class="tablink" href="#Contact"> Contact</a>
-    </div>
-</div>
-    <div class = "container_1" id = "Music">
-      <div class = "musicmobile">
-        <iframe src="https://open.spotify.com/embed/artist/0U7nvp2dvPQ3n4hR45i1s7" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><br><br><br>
-        <iframe width="355" height="200" src="https://www.youtube.com/embed/videoseries?list=PLBgiNwpkkvdVcjaBKqEDYl8UW4OjLBVKW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-        <div class="split left musicdesktopleft" style="height:94%;padding-top:3%;padding-bottom:3%;background-color:rgba(50, 143, 168,.7);justify-content:space-around">
-        	        <h1 class = "about_title" style="color:rgba(245, 245, 245,1);"> LISTEN </h1>
-<iframe src="https://open.spotify.com/embed/artist/0U7nvp2dvPQ3n4hR45i1s7" width="444" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-<iframe width="444" height="250" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1135863040&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/dan_peters" title="Dan Peters" target="_blank" style="color: #cccccc; text-decoration: none;">Dan Peters</a> · <a href="https://soundcloud.com/dan_peters/sets/original-songs" title="Original songs" target="_blank" style="color: #cccccc; text-decoration: none;">Original songs</a></div>
-</div>
-<div class="split right musicdesktopright" style="height:85%;padding-top:5%;padding-bottom:10%;background-color:rgba(124, 0, 0,.6);justify-content:space-around;">
-        	        <h1 class = "about_title" style="color:rgba(245, 245, 245,1);"> WATCH </h1>
-        	        <iframe width="444" height="250" src="https://www.youtube.com/embed/videoseries?list=PLBgiNwpkkvdVcjaBKqEDYl8UW4OjLBVKW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <iframe width="444" height="250" src="https://www.youtube.com/embed/h9WS51I19Ag" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</div>
-<div class= "verticalLine musicdesktopcenter">
- 		</div>
-        <div class = "tabcontainer">
-        <a class="tablink" href="#Home"> Home</a>
-		<a class="tablink" href="#About" > About</a>
-            <a class="tablink" href="#Music" style="color:lightblue"> Music</a>
-
-        <a class="tablink" href="#Contact"> Contact</a>
-    </div>
-    <div class="icon-bar">
-        <a href="https://open.spotify.com/artist/0U7nvp2dvPQ3n4hR45i1s7?si=iLyR5accQnip95h55v3WUQ" class = "spotify"><i class="fa fa-spotify"></i></a>
-          <a href="https://www.youtube.com/channel/UCS0jJOO99ijvq3Qc-w0IpdQ" class = "youtube" ><i class="fa fa-youtube"></i></a>
-          <a href="https://www.instagram.com/danpetersmusic/" class = "instagram" ><i class="fa fa-instagram"></i></a>
-          <a href="https://soundcloud.com/dan_peters" class = "soundcloud" ><i class="fa fa-soundcloud"></i></a>
-          <a href="mailto:danpetersmusic@gmail.com" class="mail"><i class="fa fa-envelope" ></i></a>
-        </div>
-    </div>
-</div>
-    <div class = "container_1" style="background-image:url('img/14875863_10209979378548350_1073256539_o.jpeg');background-size: cover; /* or contain depending on what you want */
-  background-position: center center;
-  background-repeat: no-repeat;" id = "Contact">
-  <h1 class = "contactpage" > Get in touch through email or the social media buttons below!<br> <br>
-        <a style="display:inline;color:inherit" class = "email" href="mailto:danpetersmusic@gmail.com">danpetersmusic@gmail.com</a>
-        </h1>
-        <div class = "tabcontainer">
-        <a class="tablink" href="#Home"> Home</a>
-            <a class="tablink" href="#About" > About</a>
-        <a class="tablink" href="#Music" > Music</a>
-        <a class="tablink" href="#Contact" style="color:lightblue"> Contact</a>
-    </div>
-    <div>
-
-    <div class="icon-bar-horizontal" style="position:absolute;left:25%;bottom:0;margin-left: auto;margin-right: auto;opacity:80%">
+ 
+<div >
+  <h1 class="left" style="font-size:3vw;" > Dan Peters </h1>
+   <div class="icon-bar-horizontal">
           <a href="https://open.spotify.com/artist/0U7nvp2dvPQ3n4hR45i1s7?si=iLyR5accQnip95h55v3WUQ" class = "spotify"><i class="fa fa-spotify"></i></a>
-          <a href="https://www.youtube.com/channel/UCS0jJOO99ijvq3Qc-w0IpdQ" class = "youtube opaque" ><i class="fa fa-youtube"></i></a>
           <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
-          <a href="https://soundcloud.com/dan_peters" class = "soundcloud opaque"  ><i class="fa fa-soundcloud"></i></a>
           <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope" ></i></a>
         </div>
-    </div>
-    </div>
+</div>
+<div style="clear: both;">
+        <h2 class="left"> Bio </h2>
+        <h2 class="right" > Recordings </h2>
 
-      <script>
-        function openPage(pageName,elmnt,color) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablink");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].style.backgroundColor = "";
-          }
-          document.getElementById(pageName).style.display = "block";
-          elmnt.style.backgroundColor = color;
-        }
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-</body>
-</html>
+</div>
+<div style="clear: both;width:50%;float:left">
+  <p1 style="font-size:1.4vw"> A pianist & singer-songwriter new on the scene in Austin, TX, Dan Peters folds in jazz harmonies with equal parts folk, rock, and Americana to craft his own authentic sound. Dan’s warm compositions and lyrics are full of curiosity about nature and the human experience. Listeners have described his music as “someone walking in the rain through an old timey downtown.” </p1>
+</div>
+<div style="float:right;width:50%">
+   <iframe style="border: 0; width: 90%; height: 50px;float:right" src="https://bandcamp.com/EmbeddedPlayer/track=3805461564/size=small/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="https://dan-peters-music.bandcamp.com/track/bottom-of-the-sea">Bottom of the Sea by Dan Peters</a></iframe>
+<br>
+<iframe style="border: 0; width: 90%; height: 50px;float:right" src="https://bandcamp.com/EmbeddedPlayer/track=90879783/size=small/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="https://dan-peters-music.bandcamp.com/track/the-birds-are-louder-in-texas">The Birds Are Louder in Texas by Dan Peters</a></iframe>
+
+<h2 style="float:right"> Selected venues </h2>
+<p> 
+Mozart’s Coffee Roasters <it>(Austin, TX)<it>
+Room 43 (Chicago, IL)
+Carnegie Hall (New York, NY)
+Salem Jazz and Soul Festival (Salem, MA)
+Marblehead Festival of Arts (Marblehead, MA)
+Chianti Jazz Club (Beverly, MA)
+Shaolin Liu Performance Center (Rockport, MA)
+</p>
+</div>
+
+<div style="clear: both;">
+        <h2 class="left"> Photos </h2>
+</div>
+<div style="clear: both;" id="slide">
+    <img style= "padding:20px;padding-left:0;padding-top:0" src="img/75F7ADE1-839B-4A2E-9FFD-41BBD065286C.png" height = 300px width= auto>
+    <img style= "padding:20px;padding-left:0;padding-top:0" src="img/IMG_3759.png" height = 300px width= auto>
+    <img style= "padding:20px;padding-left:0;padding-top:0" src="img/IMG_6592.png" height = 300px width=auto>
+</div>
+<div style="clear: both;">
+    <h2 class="left"> Videos </h2>
+</div>
+<div style="clear: both;" id="slide">
+<iframe style="padding:20px;border:none;padding-left:0;padding-top:0" src="https://drive.google.com/file/d/1RA1sODj_Dmxn2tgZm1rsqCcbMp15Oqvy/preview" width="400" height="250" allow="autoplay"></iframe>
+<iframe style="padding:20px;border:none;padding-left:0;padding-top:0" src="https://drive.google.com/file/d/1-jMXjtlFMIKRraVNjj3Qg0taYhG19mvk/preview" width="400" height="250" allow="autoplay"></iframe>
+</div>
+
+<div style="clear: both;">
+        <h2 class="left"> Contact </h2> </div>
+        <div style="clear: both;float:left;text-align:left">
+            <p1 style="float:left"><b>danpetersmusic@gmail.com <b> </p1> <br>
+            <div class="icon-bar-horizontal-bottom" style="float:left;bottom:0;width:100%">
+          <a href="https://open.spotify.com/artist/0U7nvp2dvPQ3n4hR45i1s7?si=iLyR5accQnip95h55v3WUQ" class = "spotify"><i class="fa fa-spotify"></i></a>
+          <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
+          <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope" ></i></a>
+        </div>
+      </div>
+    </body>
+      
+
