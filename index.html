@@ -13,16 +13,17 @@
 
   gtag('config', 'G-DQKF9646K4');
 </script>
-  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-  <title>Dan Peters</title>
-  <link href="dist/pattern.min.css" rel="stylesheet"> </head>
+<link rel="icon" type="image/png" href="img/favicon-32x32_dillo.png" sizes="32x32" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+<title>Dan Peters</title>
+<link href="dist/pattern.min.css" rel="stylesheet"/> </head>
 
   <style>
-    body{
+    .content {
       font-family: Arial;
-      width:65%;
+      width:75%;
       margin: 0 auto;
+      background-color: #ffffff;
     }
 
     h1,h2{font-family:'Palatino';}
@@ -34,7 +35,9 @@
 
     h2{font-size:1.5em;}
 
-    h3{font-family:'Palatino';}
+    h3{
+      font-family:'Palatino';
+      font-style:regular}
 
     .email:link{
       color: black;
@@ -73,7 +76,17 @@
     }
 
     .instagram:hover {
-      color: #bb0000;
+      color: #fa671e;
+    }
+
+    .facebook {
+      background: transparent;
+      color: white;
+      opacity:95%;
+    }
+
+    .facebook:hover {
+      color: rgba(0, 0, 255, 0.461);
     }
 
     .mail {
@@ -82,7 +95,7 @@
       opacity:95%; }
 
       .mail:hover{
-        color:blue;
+        color:black;
       }
 
       .left {
@@ -114,7 +127,7 @@
         text-align: right;
         width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
         transition: all 0.3s ease;
-        color: black;
+        color: whitesmoke;
         font-size: 3em;
       }
 
@@ -174,10 +187,16 @@
      @media only screen and (max-width: 800px) {
       body {
         font-family: Arial;
-        width:90%;
+        width:100%;
         margin: 0 auto; 
       }
-
+      
+      .content {
+      font-family: Arial;
+      width:95%;
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
       .bio{
         clear: both;width:100%;float:left
       }
@@ -191,7 +210,7 @@
         text-align: right;
         width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
         transition: all 0.3s ease;
-        color: black;
+        color: whitesmoke;
         font-size: 2em;
       }
 
@@ -234,25 +253,31 @@
       }
 
       h1{font-size:2em;}
-      h3{font-size:1em;}
+      h3{font-size:.7em;}
     }
 
   </style>
 
-  <body>
-    <div class = "title-bar">
-      <h1 class="left" style="margin-bottom:0;padding-bottom:0"> Dan Peters </h1> 
+  <body style="background-color:#007070;margin:0"> 
+  <div class = "content" >
+    <div style = "background-image: url('img/000015960017 (2).png');background-repeat: no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 18.516%;">
+    <div style = "width:95%;margin:0 auto;height:17vw">
+    <div class = "title-bar" >
+      <h1 class="left" style="margin-bottom:0;padding-bottom:0;color:whitesmoke"> Dan Peters </h1> 
       <div class="icon-bar-horizontal" style="margin-bottom:0;padding-bottom:0">
-        <a href="https://open.spotify.com/artist/0U7nvp2dvPQ3n4hR45i1s7?si=iLyR5accQnip95h55v3WUQ" class = "spotify"><i class="fa fa-spotify"></i></a>
-        <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
-        <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope-square" ></i></a>
+        <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram fa-fw"></i></a>
+        <a href="https://www.facebook.com/danpetersmusic1" class = "facebook"><i class="fa fa-facebook fa-fw"></i></a>
+        <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope-square fa-fw" ></i></a>
       </div>
       <div style="clear: both;width:50%;float:left">
-        <h3 class="left" style="margin-top:0;padding-bottom:0"> <i>Jazz pianist and singer-songwriter</i> </h3> 
+        <h3 class="left" style="margin-top:0;padding-bottom:0;color:whitesmoke"> Pianist and singer-songwriter </h3> 
       </div>
     </div>
-
-
+    </div>
+<div style = "width:85%;margin:0 auto;position:relative">
     <div class="bio">
       <h2 class="bio"> Bio </h2>
       <p style="clear: both;margin-top:0"> 
@@ -330,14 +355,10 @@
         </div>
         <br>
         Jesus, Etc. (Wilco)
-
       </div>
-
+    <div style="clear: both;">
+      <h2 class="left"> Contact </h2> 
     </div>
-  </div>
-
-  <div style="clear: both;">
-    <h2 class="left"> Contact </h2> </div>
     <div style="clear: both;float:left;text-align:left">
       <a style="color:inherit;float:left;" class = "email" href="mailto:danpetersmusic@gmail.com">danpetersmusic@gmail.com<b></a>
         <div class="icon-bar-horizontal-bottom" style="float:left;bottom:0;width:75%">
@@ -345,4 +366,8 @@
           <a href="https://www.instagram.com/danpetersmusic/" class = "instagram opaque" ><i class="fa fa-instagram"></i></a>
           <a href="mailto:danpetersmusic@gmail.com" class="mail opaque"><i class="fa fa-envelope-square" ></i></a>
         </div>
-      </body>
+    </div>
+  </div>
+  </div>
+</div>
+  </body>
