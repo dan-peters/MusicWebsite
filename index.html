@@ -49,35 +49,6 @@
       font-family:'Palatino';
       font-style:regular}
 
-    .email:link{
-      color: black;
-      background-color: transparent;
-    }
-    .email:hover{
-      color: black;
-      background-color: transparent;
-      text-decoration: underline;
-    }
-    
-    #over { font-size:2em; position:relative;}
-
-    #slide {
-      width: auto;
-      height: 100%;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      white-space: nowrap;
-    }
-
-    .spotify {
-      background: transparent;
-      color: #1DB954;
-      opacity:95%;
-    }
-    .spotify:hover {
-      color: #1DB954;
-    }
-
     .instagram {
       background: transparent;
       color: white;
@@ -98,20 +69,6 @@
     .facebook:hover {
       color: rgba(0, 0, 255, 0.461);
     }
-
-    .button {
-        background-color: rgba(28, 135, 201,0.7);
-        border: whitesmoke;
-        color: white;
-        padding: 1.5vw 2vw;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1.5vw;
-        cursor: pointer;
-        font-family:Arial;
-        border-radius: 20px;
-      }
       
     .mail {
       background:transparent;
@@ -122,12 +79,23 @@
         color:black;
       }
 
+
+    .button {
+        background-color: rgba(28, 135, 201,0.7);
+        border: whitesmoke;
+        color: white;
+        padding: 0em 0em;
+        line-height:100px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.25em;
+        cursor: pointer;
+        font-family:Arial;
+        border-radius: 20px;
+      }
       .left {
         float:left;
-      }
-
-      .bio{
-        clear: both;width:50%;float:left
       }
 
       .right{
@@ -139,13 +107,6 @@
         margin-top: 1em;
       }
 
-      .icon-bar-horizontal-bottom {
-        float:right;
-        width:100%;
-        margin-top: 1em;
-        margin-bottom: 1em;
-      }
-
       .icon-bar-horizontal a {
         float: left; /* Float links side by side */
         text-align: right;
@@ -154,55 +115,6 @@
         color: whitesmoke;
         font-size: 3em;
       }
-
-      .icon-bar-horizontal-bottom a {
-        float: left; /* Float links side by side */
-        text-align: left;
-        width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
-        transition: all 0.3s ease;
-        color: black;
-        font-size: 3em;
-      }
-
-      .recordings {
-        float:left;width:100%
-      }
-
-      .recordings h2{
-        float:left;margin-left:0%;
-      }
-
-      .venues {
-        clear: both;width:100%;float:left;margin-left:10%
-      }
-      .venues  h2{
-        float:left;margin-left:10%
-      }
-
-      .videocontainer{
-        position:relative;
-        display:inline-block;
-        text-align:left;
-        width:42%;
-        padding-right:5%;
-        ;color:darkgrey;font-family:Times New Roman
-      }
-
-
-      .youtube {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding-bottom: 56.25%;
-      }
-
-      .youtube iframe {
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-     }
 
      @media only screen and (max-width: 800px) {
       body {
@@ -218,9 +130,6 @@
       margin: 0 auto;
       background-color: #ffffff;
     }
-      .bio{
-        clear: both;width:100%;float:left
-      }
       
       .icon-bar-horizontal {
         width:40%;
@@ -233,40 +142,6 @@
         transition: all 0.3s ease;
         color: whitesmoke;
         font-size: 2em;
-      }
-
-
-      .icon-bar-horizontal-bottom a {
-        float: left; /* Float links side by side */
-        text-align: left;
-        width: 33.33%; /* Equal width (5 icons with 20% width each = 100%) */
-        transition: all 0.3s ease;
-        color: black;
-        font-size: 2em;
-      }
-      
-      .recordings {
-        float:left;width:100%
-      }
-
-      .recordings h2{
-        margin-left:0;
-      }
-
-      .venues {
-        clear: both;width:100%;float:left;margin-left:0
-      }
-      .venues  h2{
-        float:left;margin-left:0
-      }
-
-      .videocontainer{
-        position:relative;
-        display:inline-block;
-        text-align:left;
-        width:90%;
-        padding-right:5%;
-        ;color:darkgrey;font-family:Times New Roman
       }
 
       h1{font-size:2em;}
@@ -293,15 +168,20 @@
           </div>
         </div>
       </div>
-      <div style = "position:absolute;width:95%;margin:0 auto;bottom:20px;left: 81%">
-          <a href="https://mailchi.mp/fe28deb0eec2/email-signup" class="button"> Subscribe </a>
-      </div>
     </div>
     <!-- end header-->
 
     <!-- this holds the main content -->
     <div style = "width:90%;margin:0 auto;position:relative;display:flex;flex-wrap:wrap"> <!-- all white area on page - it's flex so all objects flow -->
-      
+      <!-- begin email subscribe bar-->
+      <div style = "position:relative;flex:100%;align-items:center;padding0;margin:0">
+        <br>
+        <a href="https://mailchi.mp/fe28deb0eec2/email-signup" class="button" style = "display:flex;align-items:center;justify-content:center;width:100%;padding-top:0;max-height:50px"> 
+          <img src="img/android-chrome-512x512.png" width = "30px" style = "flex-basis:5%;padding-right:10px" height ="auto" alt="">
+          Subscribe for email updates
+        </a>
+      </div>
+
       <!-- this is the left side (desktop) or top (mobile)-->
       <div class = col_1 style = "flex:65%"> 
         <h2> Music </h2>
@@ -317,21 +197,25 @@
 
       <!-- this is the right side (desktop) or bottom (mobile)-->  
       <div class = "col_2" style = "flex:35%"> 
+
         <h2> Bio </h2>
+
         <p style="font-size:17px;line-height:1.4">
           Dan Peters is a pianist and singer-songwriter, born and raised in coastal Massachusetts, who joined the Austin music scene in 2020. 
           He leads a double life as an environmental scientist and a musician, playing piano with several Austin groups including a jazz trio and Nossas Novas, a Brazilian jazz and rock band. 
           As a songwriter, Dan gravitates towards his folk and rock influences (Big Thief, Wilco, and John Prine to name a few), opting for simpler, memorable melodies with thoughtful lyrics that convey his love for nature and a knack for finding meaning in everyday observations.
         </p> 
+
         <figure>
-        <img src="img/000015960012.jpg" height = 225px width=auto>
-        <figcaption>Working on the EP at Ramble Creek Studio in Austin, TX </figcaption> 
-        </figure>
-        
-        <figure>
-        <img src="img/DSC07725.jpg" height = 225px width=auto>
+        <img src="img/DSC07725.png" width="100%" height=auto>
         <figcaption>Performing at Mozart's famous Christmas Lights Show (credit: Willy Zuniga) </figcaption> 
         </figure>
+
+        <figure>
+          <img src="img/000015960012.png" width="100%" height=auto>
+          <figcaption>Working on the EP at Ramble Creek Studio in Austin, TX </figcaption> 
+          </figure>
+
       </div>
   
     </div>
