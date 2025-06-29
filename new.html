@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQKF9646K4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DQKF9646K4');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon-32x32_dillo.png" sizes="32x32" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <title>Dan Peters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Left side - Portrait */
+        .left-side {
+            width: 40%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portrait {
+            width: 100%;
+            height: 100%;
+            background: url('img/DanPeters5.png') center/cover;
+        }
+
+        /* Right side - Content */
+        .right-side {
+            width: 60%;
+            padding: 60px 40px;
+            position: relative;
+            background: #2B1D16;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Staggered Menu */
+        .menu-container {
+            position: relative;
+            height: 250px;
+            width: 70%;
+            margin-top: 40px;
+        }
+
+        .menu-item {
+            position: absolute;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            border: 2px solid transparent;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        /* Two clear levels: HIGH (top: 30px) and LOW (top: 140px) */
+        .menu-item:nth-child(1) {
+            top: 30px;
+            left: 20px;
+        }
+
+        .menu-item:nth-child(2) {
+            top: 140px;
+            left: 100px;
+        }
+
+        .menu-item:nth-child(3) {
+            top: 30px;
+            left: 200px;
+        }
+
+        .menu-item:nth-child(4) {
+            top: 140px;
+            left: 280px;
+        }
+
+        .menu-item:nth-child(5) {
+            top: 30px;
+            left: 380px;
+        }
+
+        .menu-item:nth-child(6) {
+            top: 140px;
+            left: 460px;
+        }
+
+        /* Newsletter iframe space */
+        .newsletter-section {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            width: 480px;
+            height: 150px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                overflow-y: auto;
+            }
+
+            .left-side {
+                width: 100%;
+                height: 40vh;
+            }
+
+            .right-side {
+                width: 100%;
+                padding: 40px 20px;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .menu-container {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .menu-item {
+                position: static;
+                text-align: center;
+            }
+        }
+
+        /* Subtle animation on load */
+        .menu-item {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .menu-item:nth-child(1) { animation-delay: 0.1s; }
+        .menu-item:nth-child(2) { animation-delay: 0.2s; }
+        .menu-item:nth-child(3) { animation-delay: 0.3s; }
+        .menu-item:nth-child(4) { animation-delay: 0.4s; }
+        .menu-item:nth-child(5) { animation-delay: 0.5s; }
+        .menu-item:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side - Portrait -->
+        <div class="left-side">
+            <div class="portrait"></div>
+        </div>
+
+        <!-- Right Side - Content -->
+        <div class="right-side">
+            <div class="header">
+                <h1 class="title">Dan Peters</h1>
+                <p class="subtitle">Jazz pianist & singer-songwriter</p>
+            </div>
+
+            <div class="menu-container">
+                <a href="#portfolio" class="menu-item">Portfolio</a>
+                <a href="#about" class="menu-item">About Me</a>
+                <a href="#services" class="menu-item">Services</a>
+                <a href="#blog" class="menu-item">Blog</a>
+                <a href="#contact" class="menu-item">Contact</a>
+                <a href="#gallery" class="menu-item">Gallery</a>
+            </div>
+
+            <!-- Newsletter iframe space -->
+            <div class="newsletter-section">
+                <div style="border: 1px solid #EEE; display: inline-block; width: 480px; height: 150px;">
+                    <!-- Your iframe will go here -->
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f9f9f9; color: #999; font-style: italic;">
+                        Newsletter Signup (iframe placeholder)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
