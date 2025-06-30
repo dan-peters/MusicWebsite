@@ -41,7 +41,6 @@
         /* Left side - Portrait */
         .left-side {
             width: 40%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             position: relative;
             overflow: hidden;
         }
@@ -52,7 +51,6 @@
             background: url('img/DanPeters5.png') center/cover;
         }
 
-        /* Right side - Content */
         .right-side {
             width: 60%;
             padding: 60px 40px;
@@ -67,89 +65,81 @@
 
         .title {
             font-size: 3.5rem;
-            font-weight: 300;
-            color: #333;
-            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 10px;
             letter-spacing: 2px;
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: #666;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .newsletter-title {
+            font-size: 1.2rem;
+            color: #FFC48E;
             font-weight: 300;
             letter-spacing: 1px;
         }
 
         /* Staggered Menu */
         .menu-container {
-            position: relative;
+            position:relative;         
             height: 250px;
-            width: 70%;
+            width: 85%;
             margin-top: 40px;
+            margin:auto;
+        }
+
+        .menu-flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
         }
 
         .menu-item {
-            position: absolute;
-            background: white;
-            padding: 20px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #333;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ffffff;
             text-decoration: none;
-            border: 2px solid transparent;
         }
 
-        .menu-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            border-color: #667eea;
-        }
-
-        /* Two clear levels: HIGH (top: 30px) and LOW (top: 140px) */
         .menu-item:nth-child(1) {
-            top: 30px;
-            left: 20px;
+            margin-top: 50px;
         }
 
         .menu-item:nth-child(2) {
-            top: 140px;
-            left: 100px;
+            margin-top: 100px;
         }
 
         .menu-item:nth-child(3) {
-            top: 30px;
-            left: 200px;
+            margin-top: 50px;
         }
 
         .menu-item:nth-child(4) {
-            top: 140px;
-            left: 280px;
+            margin-top: 100px;
         }
 
         .menu-item:nth-child(5) {
-            top: 30px;
-            left: 380px;
+            margin-top: 50px;
         }
 
         .menu-item:nth-child(6) {
-            top: 140px;
-            left: 460px;
+            margin-top: 100px;
         }
 
-        /* Newsletter iframe space */
         .newsletter-section {
-            position: absolute;
+            position: relative;
             bottom: 40px;
-            right: 40px;
-            width: 480px;
-            height: 150px;
+            margin:auto;
+            width:480px;
         }
 
-        /* Mobile responsive */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -210,33 +200,37 @@
 </head>
 <body>
     <div class="container">
-        <!-- Left Side - Portrait -->
         <div class="left-side">
             <div class="portrait"></div>
         </div>
 
-        <!-- Right Side - Content -->
         <div class="right-side">
             <div class="header">
                 <h1 class="title">Dan Peters</h1>
-                <p class="subtitle">Jazz pianist & singer-songwriter</p>
+                <p class="subtitle">jazz pianist & singer-songwriter</p>
             </div>
 
             <div class="menu-container">
-                <a href="#portfolio" class="menu-item">Portfolio</a>
-                <a href="#about" class="menu-item">About Me</a>
-                <a href="#services" class="menu-item">Services</a>
-                <a href="#blog" class="menu-item">Blog</a>
-                <a href="#contact" class="menu-item">Contact</a>
-                <a href="#gallery" class="menu-item">Gallery</a>
+                <div class="menu-flex">
+                <a href="#portfolio" class="menu-item">music</a>
+                <a href="#about" class="menu-item">blog</a>
+                <a href="#services" class="menu-item">private events</a>
+                <a href="#blog" class="menu-item">about</a>
+                <a href="#contact" class="menu-item">contact</a>
+                <a href="#gallery" class="menu-item">photos</a>
+                </div>
             </div>
 
             <!-- Newsletter iframe space -->
             <div class="newsletter-section">
-                <div style="border: 1px solid #EEE; display: inline-block; width: 480px; height: 150px;">
+                <p class = "newsletter-title"> Sign up to learn about new music and shows!</p>
+                <div style="display: inline-block; width: 480px; height: 150px;">
                     <!-- Your iframe will go here -->
-                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #f9f9f9; color: #999; font-style: italic;">
-                        Newsletter Signup (iframe placeholder)
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                        <iframe src="https://danpetersmusic.substack.com/embed" 
+                        width="480" height="150" 
+                        style="border:0px solid #EEE; filter: invert(0.90) sepia(1) saturate(2) brightness(1) hue-rotate(-20deg);" 
+                        frameborder="0" scrolling="no"></iframe>                    
                     </div>
                 </div>
             </div>
