@@ -20,47 +20,68 @@
     </script>
 
     <style>
-        *{margin:0;
+        *   {
+            margin:0;
             padding: 0;
+            color:#ffffff
+        }
+
+        a:link, a:visited {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        hr {
+            width:97%;
+            margin-top:10px;
         }
 
         body {
             font-family: 'Playfair Display', sans-serif;
             height: 100vh;
-            overflow: hidden;
+        }
+
+        iframe {
+            margin:auto;
+            display:block;
+        }
+
+        ul {
+            padding-left: 10px;
         }
 
         .container {
             display: flex;
+            flex-direction:column;
+            align-items:center;
             height: 100vh;
+            background: #2B1D16;
+            overflow-x: hidden;
+            overflow-y:scroll;
+        }
+
+        .top{
+            width: 100vw;
+            display:flex;
         }
 
         .left {
             width: 40%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .picture {
-            width: 100%;
-            height: 100%;
-            background: url('img/DanPeters5_resized.jpg') center/cover;
+            display:inline-block;
+            padding-left:50px;
         }
 
         .right {
             width:60%;
-            height:100%;
-            display: flex;
-            flex-direction:column;
-            justify-content:space-between;
-            background: #2B1D16;
+            align-items:center;
+            display:inline-block;
         }
 
         .menu-container {
             height: auto;
             width: 65%;
             margin: 0 auto;
-            padding-top: 20px;
+            padding-top: 10px;
         }
 
         .menu-flex{
@@ -87,38 +108,37 @@
         }
 
         .header {
-            text-align: center;
+            text-align: left;
+        }
+
+        ul {
+        padding-left: 50px;
         }
 
         .title {
-            font-size: 3.5rem;
+            font-size: 2rem;
             font-weight: bold;
             color: #ffffff;
             letter-spacing: 2px;
-            margin-bottom:10px;
+            margin-bottom:5px;
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #ffffff;
             font-weight: bold;
             letter-spacing: 1px;
         }
 
-        .newsletter-title {
-            font-size: 1.2rem;
-            color: #FFC48E;
-            font-weight: 300;
-            letter-spacing: 1px;
-            margin-bottom:15px;
-            text-align: center;
+        .content {
+            width:50%;
+            line-height: 1.5;
+            font-size:1.3rem;
+            display:flex;
+            flex-direction:column;
+            vertical-align: middle;
         }
 
-        .newsletter {
-            width:480px;
-            margin: 0 auto;
-            padding-bottom:20px;
-        }
 
         @media (max-width: 768px) {
             .container {
@@ -128,14 +148,12 @@
 
             .left {
                 width: 100%;
-                height: 100vh;
+                height: 40vh;
             }
 
             .right {
                 width: 100%;
-                position:fixed;
-                z-index: 0;
-                background: #2b1d16b7;
+                padding: 40px 20px;
             }
 
             .title {
@@ -145,59 +163,52 @@
             .menu-container {
                 height: auto;
                 display: flex;
-                flex-direction: row;
-                justify-content:space-evenly;
-                width: 100%;
+                flex-direction: column;
+                gap: 20px;
             }
 
             .menu-item {
                 position: static;
                 text-align: center;
             }
-
-            .newsletter {
-            width:100%;
-            margin: 0 auto;
-            padding-bottom:20px;
-            background: #2b1d16;
-            justify-content:center;
-        }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="left">
-            <div class="picture"></div>
-        </div>
+        <div class = "top">
+            <div class="left">
+                    <div class="header">
+                    <h1 class="title" ><a href="new.html">Dan Peters</a></h1>
+                    <p class="subtitle">jazz pianist & singer-songwriter</p>
+                    </div>
+            </div>
 
-        <div class="right">
-            <div class="menu-container">
-                <div class="menu-flex">
-                <a href="about.html" class="menu-item">about</a>
-                <a href="music.html" class="menu-item">music</a>
-                <a href="events.html" class="menu-item">events</a>
-                <a href="news.html" class="menu-item">news</a>
-                <a href="contact.html" class="menu-item">contact</a>
+            <div class="right">
+                <div class="menu-container">
+                    <div class="menu-flex">
+                    <a href="about.html" class="menu-item">about</a>
+                    <a href="music.html" class="menu-item">music</a>
+                    <a href="events.html" class="menu-item">events</a>
+                    <a href="news.html" class="menu-item">news</a>
+                    <a href="contact.html" class="menu-item">contact</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="header">
-                <h1 class="title">Dan Peters</h1>
-                <p class="subtitle">jazz pianist & singer-songwriter</p>
-            </div>
-
-            <div class="newsletter">
-                <br>
-                <p class = "newsletter-title"> Sign up to learn about new music and shows!</p>
-                <div align="center">
+        </div>
+        <hr>
+        <br><br>
+        <h1 class="title" >news</h1>
+        <br>
+        <div class="content">
+            <p>  The best way to stay up to date on new music and live shows is to sign up for my email newsletter:  </p>
+        </div>
+        <br>
+        <div class="newsletter">
                 <iframe src="https://danpetersmusic.substack.com/embed" 
                 width=480px height=150px 
                 style="border:0px solid #EEE; filter: invert(0.90) sepia(1) saturate(2) brightness(1) hue-rotate(-20deg);" 
-                frameborder="0" scrolling="no"></iframe>    </div>                
-            </div>
+                frameborder="0" scrolling="no"></iframe>                    
         </div>
-    </div>
 </body>
-</html>
