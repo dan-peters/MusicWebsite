@@ -20,7 +20,8 @@
     </script>
 
     <style>
-        *{margin:0;
+        *{  color: #FFFFF0;
+            margin:0;
             padding: 0;
         }
 
@@ -58,26 +59,27 @@
 
         .menu-container {
             height: auto;
-            width: 65%;
+            width: 70%;
             margin: 0 auto;
-            padding-top: 20px;
+            padding-top: 10px;
         }
 
         .menu-flex{
             display: flex;
             flex-direction: row;
-            justify-content: space-between; 
+            justify-content: space-evenly;
+            align-items: top;
+            flex-wrap: wrap;
         }
 
         .menu-item {
             cursor: pointer;
-            padding: 12px 20px;
-            border-radius: 8px; 
-            border: 1px solid transparent; 
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid transparent;
             transition: all 0.3s ease;
             font-size: 1.3rem;
             font-weight: bold;
-            color: #ffffff;
             text-decoration: none;
         }
 
@@ -93,16 +95,21 @@
         .title {
             font-size: 3.5rem;
             font-weight: bold;
-            color: #ffffff;
+            color: #FFFFF0;
             letter-spacing: 2px;
             margin-bottom:10px;
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: #ffffff;
+            color: #FFFFF0;
             font-weight: bold;
             letter-spacing: 1px;
+        }
+            
+        .newsletter iframe {
+            width: 450px;
+            height:150px;
         }
 
         .newsletter-title {
@@ -112,12 +119,14 @@
             letter-spacing: 1px;
             margin-bottom:15px;
             text-align: center;
+            width:95%;
         }
 
         .newsletter {
             width:480px;
             margin: 0 auto;
             padding-bottom:20px;
+            text-align:center;
         }
 
         @media (max-width: 768px) {
@@ -153,6 +162,11 @@
             .menu-item {
                 position: static;
                 text-align: center;
+                font-size:16px;
+            }
+
+            .newsletter iframe {
+                width: 400px;
             }
 
             .newsletter {
@@ -180,7 +194,7 @@
                 <a href="https://danpetersmusic.substack.com" class="menu-item"
                 target="_blank" rel="noopener noreferrer" 
                 title="updates ↗" style="color:orange">updates ⤴</a>
-                <a href="events.html" class="menu-item">events</a>
+                <a href="booking.html" class="menu-item">booking</a>
                 <a href="contact.html" class="menu-item">contact</a>
                 </div>
             </div>
@@ -192,12 +206,12 @@
 
             <div class="newsletter">
                 <br>
-                <p class = "newsletter-title"> Sign up to learn about new music and shows!</p>
-                <div align="center">
+                <p class = "newsletter-title"> Get updates about new music and shows!</p>
+                <div>
                 <iframe src="https://danpetersmusic.substack.com/embed" 
-                width=480px height=150px 
                 style="border:0px solid #EEE; filter: invert(0.90) sepia(1) saturate(2) brightness(1) hue-rotate(-20deg);" 
-                frameborder="0" scrolling="no"></iframe>    </div>                
+                frameborder="0" scrolling="no"></iframe>    
+                </div>                
             </div>
         </div>
     </div>

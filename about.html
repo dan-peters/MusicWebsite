@@ -19,180 +19,8 @@
     gtag('config', 'G-DQKF9646K4');
     </script>
 
-    <style>
-        *   {
-            margin:0;
-            padding: 0;
-            color:#ffffff
-        }
-
-        a:link, a:visited {
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-        }
-
-        hr {
-            width:97%;
-            margin-top:10px;
-        }
-
-        body {
-            font-family: 'Playfair Display', sans-serif;
-            height: 100vh;
-        }
-
-        iframe {
-            margin:auto;
-            display:block;
-        }
-
-        .container {
-            display: flex;
-            flex-direction:column;
-            align-items:center;
-            align-content:center;
-            height: 100vh;
-            background: #2B1D16;
-            overflow-x: hidden;
-            overflow-y:scroll;
-        }
-
-        .top{
-            width: 100vw;
-            display:flex;
-        }
-
-        .left {
-            width: 40%;
-            display:inline-block;
-            padding-left:50px;
-        }
-
-        .right {
-            width:60%;
-            align-items:center;
-            display:inline-block;
-        }
-
-        .menu-container {
-            height: auto;
-            width: 75%;
-            margin: 0 auto;
-            padding-top: 10px;
-        }
-
-        .menu-flex{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between; 
-        }
-
-        .menu-item {
-            cursor: pointer;
-            padding: 6px 10px;
-            border-radius: 8px; 
-            border: 1px solid transparent; 
-            transition: all 0.3s ease;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .menu-item:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2); 
-        }
-
-        .header {
-            text-align: left;
-        }
-
-        .title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ffffff;
-            letter-spacing: 2px;
-            margin-bottom:5px;
-        }
-
-        .sectiontitle {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ffffff;
-            letter-spacing: 2px;
-            margin-bottom:5px;
-            margin-top:10px;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            color: #ffffff;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .content {
-            width:50%;
-            line-height: 1.5;
-            font-size:1.3rem;
-            display:flex;
-            flex-direction:column;
-            vertical-align: middle;
-        }
-
-        .mobiletitle{
-            display:none
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                overflow-y: auto;
-            }
-
-            .left {
-                width: 100%;
-                height: 40vh;
-                display:none;
-            }
-
-            .right {
-                width: 100%;
-            }
-
-            .title {
-                font-size: 2.5rem;
-                margin-top:10px;
-            }
-
-            .menu-container {
-                height: auto;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                width: 100%;
-            }
-
-            .menu-item {
-                position: static;
-                text-align: center;
-                font-size:16px;
-            }
-            
-            .mobiletitle{
-                display:flex
-            }
-
-            .sectiontitle {
-            font-size: 1.5rem;
-            }
-            .content{
-                width:80%;
-                font-size:16px;
-            }
-        }
-    </style>
+    <!-- global css style sheet for subpages -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -213,7 +41,7 @@
                 <a href="https://danpetersmusic.substack.com" class="menu-item"
                 target="_blank" rel="noopener noreferrer" 
                 title="updates ↗" style="color:orange">updates ⤴</a>
-                <a href="events.html" class="menu-item">events</a>
+                <a href="booking.html" class="menu-item">booking</a>
                 <a href="contact.html" class="menu-item">contact</a>
                     </div>
                 </div>
@@ -229,9 +57,19 @@
             </p>
             <br>
             <img style= "width:100%; height:auto;margin:0 auto" src="img/000015960012.png">
+            <br>
+            <h2>in the press</h2>
+            <a href="https://kutx.org/song-of-the-day/dan-peters-jenny-lake/" class="mediacard">
+                <div class="source">kutx98.9</div>
+                <div class="mediatitle">Song of the Day: Dan Peters, "Jenny Lake"</div>
+                <div class="mediatext">A KUTX ("the Austin Music Experience") write-up of Dan's 2023 single Jenny Lake when it was featured on the radio as song of the day.</div>
+            </a>
+
+            <a href="https://www.statesman.com/story/entertainment/music/2024/09/04/brazilian-independence-day-austin-tx-music-scene-bossa-nova-psych-sounds/75057778007/" class="mediacard">
+                <div class="source">Austin American-Statesman</div>
+                <div class="mediatitle">As Austin celebrates Brazilian Independence Day, a local bossa nova music scene blooms</div>
+                <div class="mediatext">A deep dive into Austin's Brazilian music scene, featuring Nossas Novas, the band Dan performs in on keyboards.</div>
+            </a>
+        </div>
         </div>
 </body>
-
-
-            
-            
