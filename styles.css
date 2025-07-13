@@ -11,27 +11,27 @@ a:visited {
 }
 
 .logo-container {
-  display: flex;
-  padding-top:30px;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    padding-top: 30px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-container a img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .logo-container a:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .musicimage {
-    width:70%;
+    width: 70%;
 }
 
 hr {
@@ -123,11 +123,11 @@ iframe {
 
 .header {
     text-align: left;
-    padding-left:50px;
+    padding-left: 50px;
 }
 
 h2 {
-    text-align:center;
+    text-align: center;
 }
 
 .mediacard {
@@ -139,7 +139,7 @@ h2 {
     max-width: 500px;
     border-top: 4px solid #D2691E;
     margin: 0 auto;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .mediacard:hover {
@@ -209,6 +209,12 @@ ul {
     padding-bottom: 30px;
 }
 
+
+svg {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
 .newsletterpicture {
     width: 40%;
     display: block;
@@ -227,7 +233,7 @@ ul {
     }
 
     .musicimage {
-    width:100%;
+        width: 100%;
     }
 
     .left {
@@ -249,11 +255,11 @@ ul {
     }
 
     .logo-container a img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
     }
 
     .menu-container {
@@ -261,7 +267,7 @@ ul {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        padding-top:10px;
+        padding-top: 10px;
         width: 100%;
     }
 
@@ -286,9 +292,13 @@ ul {
     .content {
         width: 80%;
         font-size: 1rem;
-        font-weight:500;
+        font-weight: 500;
     }
 
+    svg {
+        width: 16px;
+        height: 16px;
+    }
 
     .music-flex {
         display: flex;
