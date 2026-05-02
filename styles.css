@@ -55,6 +55,35 @@ iframe {
     padding-top: 30px;
 }
 
+.music-flex-new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.music-new-label {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0.4rem;
+  margin-top:2rem;
+  text-align: center;
+}
+.music-new {
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  padding: 0;
+  margin: 0 auto;
+
+}
+.music-new p {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: white;
+  margin-bottom: 0.4rem;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -303,6 +332,11 @@ svg {
     .music-flex {
         display: flex;
         flex-direction: column;
+    }
+    
+    .music-new iframe {
+        width: 250px !important; 
+        height:363px !important;
     }
 
     ul {
